@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+$wrapper-bg: #fff;
+$center-bg: #1e293b;
+.main-p{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(61, 61, 61);
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 50vh;
+    background-color: $wrapper-bg;
+    z-index: 9;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    & h1{
+        font-size: 14vw;
+        position: relative;
+        @media (min-width: 768px) {
+            & {
+                font-size: 10vw;
+            }
+        }
+    }
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50vh;
+    background-color: $wrapper-bg;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 99;
+    & h1{
+        font-size: 26vw;
+        position: relative;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            & {
+                font-size: 16vw;
+            }
+        }
+    }
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform-origin: center;
+    background-color: $center-bg;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    overflow: hidden;
+    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+
+    & .content{
+        width: 100%;
+        margin-top: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.25rem;
+
+        & .subheader{
+            font-size: 1rem;
+        }
+        
+    }
+
+    & .img{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        & img{
+            max-width: 80%;
+        }
+    }
+    @media (min-width: 1024px) {
+        & {
+            flex-direction: row;
+            padding: '20vh';
+
+            & .content{
+                font-size: 2.125rem;
+                
+                & .subheader{
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
